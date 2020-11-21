@@ -4,8 +4,10 @@ import HtmlWebpackHarddiskPlugin from "html-webpack-harddisk-plugin";
 import InlineChunkHtmlPlugin from "inline-chunk-html-plugin";
 import { Configuration } from "webpack";
 
+const isProd = process.env.NODE_ENV === "prod";
+
 const config: Configuration & { [key: string]: unknown } = {
-  mode: "development",
+  mode: isProd ? "production" : "development",
   entry: {
     monaco: path.resolve(__dirname, "src/index.ts"),
   },
@@ -14,7 +16,7 @@ const config: Configuration & { [key: string]: unknown } = {
     filename: "[name].bundle.js",
     publicPath: "/",
   },
-  devtool: "inline-source-map",
+  devtool: isProd ? false : "inline-source-map",
   module: {
     rules: [
       {

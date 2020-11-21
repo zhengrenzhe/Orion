@@ -16,6 +16,7 @@
 		AD195F5525690AF7007DC5C7 /* StepCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD195F5425690AF7007DC5C7 /* StepCommand.swift */; };
 		AD195F5825690B1B007DC5C7 /* DebuggerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD195F5725690B1B007DC5C7 /* DebuggerState.swift */; };
 		AD195F5B25690B36007DC5C7 /* DebuggerTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD195F5A25690B36007DC5C7 /* DebuggerTarget.swift */; };
+		AD8B62B125696557009EB91F /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = AD8B62B025696557009EB91F /* index.html */; };
 		ADAB94F72569372E00B0F74C /* SourceCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB94F62569372E00B0F74C /* SourceCode.swift */; };
 		ADAB94FA256937F600B0F74C /* DisassembleCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB94F9256937F600B0F74C /* DisassembleCode.swift */; };
 		ADAB94FD2569393600B0F74C /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB94FC2569393600B0F74C /* Register.swift */; };
@@ -39,6 +40,7 @@
 		AD195F5425690AF7007DC5C7 /* StepCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCommand.swift; sourceTree = "<group>"; };
 		AD195F5725690B1B007DC5C7 /* DebuggerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggerState.swift; sourceTree = "<group>"; };
 		AD195F5A25690B36007DC5C7 /* DebuggerTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggerTarget.swift; sourceTree = "<group>"; };
+		AD8B62B025696557009EB91F /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = dist/index.html; sourceTree = "<group>"; };
 		ADAB94F62569372E00B0F74C /* SourceCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceCode.swift; sourceTree = "<group>"; };
 		ADAB94F9256937F600B0F74C /* DisassembleCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisassembleCode.swift; sourceTree = "<group>"; };
 		ADAB94FC2569393600B0F74C /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		ADAB950B256940F600B0F74C /* monaco */ = {
 			isa = PBXGroup;
 			children = (
+				AD8B62B025696557009EB91F /* index.html */,
 			);
 			path = monaco;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD195F36256907C9007DC5C7 /* Preview Assets.xcassets in Resources */,
+				AD8B62B125696557009EB91F /* index.html in Resources */,
 				AD195F47256909E0007DC5C7 /* Localizable.strings in Resources */,
 				AD195F33256907C9007DC5C7 /* Assets.xcassets in Resources */,
 			);
