@@ -14,3 +14,5 @@
 "step-into" = "Step into";
 "step-out" = "Step out";
 "debug-target" = "调试目标";
+"add-debug-target" = "添加调试目标";
+"state" = "调试器状态";

@@ -16,9 +16,9 @@ struct DebuggerTarget: View {
             })
                 .frame(maxWidth: 200, alignment: .leading)
                 .help("debug-target")
-            Button(action: {}, label: {
+            CommandButton(title: "add-debug-target") {
                 Image(systemName: "plus")
-            })
+            }
         }
     }
 }

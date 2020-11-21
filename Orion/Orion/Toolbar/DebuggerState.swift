@@ -9,13 +9,14 @@ import SwiftUI
 
 struct DebuggerState: View {
     var body: some View {
-        Text("Hello, World!")
-            .frame(width: 420, alignment: .leading)
+        Text("hello world")
+            .frame(width: 320, alignment: .leading)
             .font(.system(size: 12, weight: .light, design: .rounded))
             .padding(.horizontal, 12)
             .padding(.vertical, 4)
             .background(Color.gray.opacity(0.15))
             .cornerRadius(5)
+            .help("state")
     }
 }
 

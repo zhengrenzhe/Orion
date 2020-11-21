@@ -14,3 +14,5 @@
 "step-into" = "Step into";
 "step-out" = "Step out";
 "debug-target" = "Debug target";
+"add-debug-target" = "Add debug target";
+"state" = "Debugger state";

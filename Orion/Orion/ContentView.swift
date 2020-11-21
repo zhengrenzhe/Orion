@@ -9,14 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HStack {}.toolbar(content: {
+        HStack {
+            HStack {
+                Text("XX")
+            }.frame(maxWidth: .infinity).background(Color.red)
+        }.toolbar(content: {
             ToolbarItemGroup {
                 StepCommand()
-            }
-            ToolbarItemGroup {
+                Spacer()
                 DebuggerState()
-            }
-            ToolbarItemGroup {
+                Spacer()
                 DebuggerTarget()
             }
         })
