@@ -10,26 +10,31 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         HStack(spacing: 0) {
-            SourceCode()
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.red)
-            DisassembleCode()
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.green)
-            VStack {
+            HSplitView {
+                SourceCode()
+                    .frame(minWidth: 100, maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.red)
+                    .layoutPriority(1)
+                DisassembleCode()
+                    .frame(minWidth: 100, maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.green)
+                    .layoutPriority(1)
+            }
+            VSplitView {
                 Register()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .frame(maxWidth: .infinity, minHeight: 100, maxHeight: .infinity)
                     .background(Color.pink)
                 Variables()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .frame(maxWidth: .infinity, minHeight: 100, maxHeight: .infinity)
                     .background(Color.purple)
                 BreakPoints()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .frame(maxWidth: .infinity, minHeight: 100, maxHeight: .infinity)
                     .background(Color.yellow)
                 Threads()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .frame(maxWidth: .infinity, minHeight: 100, maxHeight: .infinity)
                     .background(Color.blue)
-            }.frame(width: 270)
+            }.frame(width: 270).fixedSize(horizontal: true, vertical: false)
+                .layoutPriority(0)
         }.toolbar(content: {
             ToolbarItemGroup {
                 StepCommand()
