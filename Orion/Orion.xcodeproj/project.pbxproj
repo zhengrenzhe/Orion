@@ -16,6 +16,12 @@
 		AD195F5525690AF7007DC5C7 /* StepCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD195F5425690AF7007DC5C7 /* StepCommand.swift */; };
 		AD195F5825690B1B007DC5C7 /* DebuggerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD195F5725690B1B007DC5C7 /* DebuggerState.swift */; };
 		AD195F5B25690B36007DC5C7 /* DebuggerTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD195F5A25690B36007DC5C7 /* DebuggerTarget.swift */; };
+		ADAB94F72569372E00B0F74C /* SourceCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB94F62569372E00B0F74C /* SourceCode.swift */; };
+		ADAB94FA256937F600B0F74C /* DisassembleCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB94F9256937F600B0F74C /* DisassembleCode.swift */; };
+		ADAB94FD2569393600B0F74C /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB94FC2569393600B0F74C /* Register.swift */; };
+		ADAB9500256939FC00B0F74C /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB94FF256939FC00B0F74C /* Variables.swift */; };
+		ADAB950325693A6E00B0F74C /* BreakPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB950225693A6E00B0F74C /* BreakPoints.swift */; };
+		ADAB950625693AD200B0F74C /* Threads.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB950525693AD200B0F74C /* Threads.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		AD195F5425690AF7007DC5C7 /* StepCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCommand.swift; sourceTree = "<group>"; };
 		AD195F5725690B1B007DC5C7 /* DebuggerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggerState.swift; sourceTree = "<group>"; };
 		AD195F5A25690B36007DC5C7 /* DebuggerTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggerTarget.swift; sourceTree = "<group>"; };
+		ADAB94F62569372E00B0F74C /* SourceCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceCode.swift; sourceTree = "<group>"; };
+		ADAB94F9256937F600B0F74C /* DisassembleCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisassembleCode.swift; sourceTree = "<group>"; };
+		ADAB94FC2569393600B0F74C /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		ADAB94FF256939FC00B0F74C /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
+		ADAB950225693A6E00B0F74C /* BreakPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakPoints.swift; sourceTree = "<group>"; };
+		ADAB950525693AD200B0F74C /* Threads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Threads.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +101,12 @@
 		AD195F4C25690A64007DC5C7 /* Panels */ = {
 			isa = PBXGroup;
 			children = (
+				ADAB94F62569372E00B0F74C /* SourceCode.swift */,
+				ADAB94F9256937F600B0F74C /* DisassembleCode.swift */,
+				ADAB94FC2569393600B0F74C /* Register.swift */,
+				ADAB94FF256939FC00B0F74C /* Variables.swift */,
+				ADAB950225693A6E00B0F74C /* BreakPoints.swift */,
+				ADAB950525693AD200B0F74C /* Threads.swift */,
 			);
 			path = Panels;
 			sourceTree = "<group>";
@@ -226,9 +244,15 @@
 				AD195F5825690B1B007DC5C7 /* DebuggerState.swift in Sources */,
 				AD195F31256907C8007DC5C7 /* ContentView.swift in Sources */,
 				AD195F5125690AC0007DC5C7 /* CommandButton.swift in Sources */,
+				ADAB94FD2569393600B0F74C /* Register.swift in Sources */,
 				AD195F5B25690B36007DC5C7 /* DebuggerTarget.swift in Sources */,
+				ADAB94F72569372E00B0F74C /* SourceCode.swift in Sources */,
 				AD195F2F256907C8007DC5C7 /* OrionApp.swift in Sources */,
+				ADAB950625693AD200B0F74C /* Threads.swift in Sources */,
 				AD195F5525690AF7007DC5C7 /* StepCommand.swift in Sources */,
+				ADAB94FA256937F600B0F74C /* DisassembleCode.swift in Sources */,
+				ADAB9500256939FC00B0F74C /* Variables.swift in Sources */,
+				ADAB950325693A6E00B0F74C /* BreakPoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
