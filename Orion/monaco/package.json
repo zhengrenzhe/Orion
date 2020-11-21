@@ -1,0 +1,13 @@
+{
+  "name": "monaco",
+  "scripts": {},
+  "author": "zhengrenzhe <zhengrenzhe.niujie@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.8.1",
+    "@typescript-eslint/parser": "^4.8.1",
+    "eslint": "^7.14.0",
+    "prettier": "^2.2.0",
+    "typescript": "^4.1.2"
+  }
+}
