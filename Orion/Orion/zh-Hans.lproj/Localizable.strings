@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  Orion
+
+  Created by Renzhe Zheng on 2020/11/21.
+  
+*/
+
+"step-level" = "步进级别";
+"source-level" = "源代码级";
+"instruction-level" = "指令级";
+"continue" = "继续执行程序";
+"step-over" = "Step over";
+"step-into" = "Step into";
+"step-out" = "Step out";
+"debug-target" = "当前调试目标";
