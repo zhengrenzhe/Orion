@@ -22,6 +22,8 @@
 		ADAB9500256939FC00B0F74C /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB94FF256939FC00B0F74C /* Variables.swift */; };
 		ADAB950325693A6E00B0F74C /* BreakPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB950225693A6E00B0F74C /* BreakPoints.swift */; };
 		ADAB950625693AD200B0F74C /* Threads.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB950525693AD200B0F74C /* Threads.swift */; };
+		ADAB95092569404400B0F74C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB95082569404400B0F74C /* WebView.swift */; };
+		ADAB950D256941C800B0F74C /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = ADAB950C256941C800B0F74C /* index.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		ADAB94FF256939FC00B0F74C /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
 		ADAB950225693A6E00B0F74C /* BreakPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakPoints.swift; sourceTree = "<group>"; };
 		ADAB950525693AD200B0F74C /* Threads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Threads.swift; sourceTree = "<group>"; };
+		ADAB95082569404400B0F74C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		ADAB950C256941C800B0F74C /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 		AD195F2D256907C8007DC5C7 /* Orion */ = {
 			isa = PBXGroup;
 			children = (
+				ADAB950B256940F600B0F74C /* monaco */,
 				AD195F4F25690AB4007DC5C7 /* Atoms */,
 				AD195F4E25690A8E007DC5C7 /* Toolbar */,
 				AD195F4C25690A64007DC5C7 /* Panels */,
@@ -125,8 +130,17 @@
 			isa = PBXGroup;
 			children = (
 				AD195F5025690AC0007DC5C7 /* CommandButton.swift */,
+				ADAB95082569404400B0F74C /* WebView.swift */,
 			);
 			path = Atoms;
+			sourceTree = "<group>";
+		};
+		ADAB950B256940F600B0F74C /* monaco */ = {
+			isa = PBXGroup;
+			children = (
+				ADAB950C256941C800B0F74C /* index.html */,
+			);
+			path = monaco;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD195F36256907C9007DC5C7 /* Preview Assets.xcassets in Resources */,
+				ADAB950D256941C800B0F74C /* index.html in Resources */,
 				AD195F47256909E0007DC5C7 /* Localizable.strings in Resources */,
 				AD195F33256907C9007DC5C7 /* Assets.xcassets in Resources */,
 			);
@@ -243,6 +258,7 @@
 			files = (
 				AD195F5825690B1B007DC5C7 /* DebuggerState.swift in Sources */,
 				AD195F31256907C8007DC5C7 /* ContentView.swift in Sources */,
+				ADAB95092569404400B0F74C /* WebView.swift in Sources */,
 				AD195F5125690AC0007DC5C7 /* CommandButton.swift in Sources */,
 				ADAB94FD2569393600B0F74C /* Register.swift in Sources */,
 				AD195F5B25690B36007DC5C7 /* DebuggerTarget.swift in Sources */,
