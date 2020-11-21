@@ -12,6 +12,7 @@ const config: Configuration & { [key: string]: unknown } = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].bundle.js",
+    publicPath: "/",
   },
   devtool: "inline-source-map",
   module: {
@@ -22,8 +23,12 @@ const config: Configuration & { [key: string]: unknown } = {
         exclude: /node_modules/,
       },
       {
-        test: /\.s[ac]ss$/,
+        test: /\.s?[ac]ss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.(png|jpg|gif|ttf|woff|woff2)$/i,
+        use: ["url-loader"],
       },
     ],
   },
