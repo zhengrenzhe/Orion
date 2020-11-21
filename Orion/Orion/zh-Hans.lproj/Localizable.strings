@@ -13,4 +13,4 @@
 "step-over" = "Step over";
 "step-into" = "Step into";
 "step-out" = "Step out";
-"debug-target" = "当前调试目标";
+"debug-target" = "调试目标";

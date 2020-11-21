@@ -12,6 +12,10 @@
 		AD195F33256907C9007DC5C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD195F32256907C9007DC5C7 /* Assets.xcassets */; };
 		AD195F36256907C9007DC5C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD195F35256907C9007DC5C7 /* Preview Assets.xcassets */; };
 		AD195F47256909E0007DC5C7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD195F49256909E0007DC5C7 /* Localizable.strings */; };
+		AD195F5125690AC0007DC5C7 /* CommandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD195F5025690AC0007DC5C7 /* CommandButton.swift */; };
+		AD195F5525690AF7007DC5C7 /* StepCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD195F5425690AF7007DC5C7 /* StepCommand.swift */; };
+		AD195F5825690B1B007DC5C7 /* DebuggerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD195F5725690B1B007DC5C7 /* DebuggerState.swift */; };
+		AD195F5B25690B36007DC5C7 /* DebuggerTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD195F5A25690B36007DC5C7 /* DebuggerTarget.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		AD195F38256907C9007DC5C7 /* Orion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Orion.entitlements; sourceTree = "<group>"; };
 		AD195F48256909E0007DC5C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AD195F4B256909E3007DC5C7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		AD195F5025690AC0007DC5C7 /* CommandButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandButton.swift; sourceTree = "<group>"; };
+		AD195F5425690AF7007DC5C7 /* StepCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCommand.swift; sourceTree = "<group>"; };
+		AD195F5725690B1B007DC5C7 /* DebuggerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggerState.swift; sourceTree = "<group>"; };
+		AD195F5A25690B36007DC5C7 /* DebuggerTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggerTarget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,9 @@
 		AD195F2D256907C8007DC5C7 /* Orion */ = {
 			isa = PBXGroup;
 			children = (
+				AD195F4F25690AB4007DC5C7 /* Atoms */,
+				AD195F4E25690A8E007DC5C7 /* Toolbar */,
+				AD195F4C25690A64007DC5C7 /* Panels */,
 				AD195F2E256907C8007DC5C7 /* OrionApp.swift */,
 				AD195F30256907C8007DC5C7 /* ContentView.swift */,
 				AD195F32256907C9007DC5C7 /* Assets.xcassets */,
@@ -73,6 +84,31 @@
 				AD195F35256907C9007DC5C7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AD195F4C25690A64007DC5C7 /* Panels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Panels;
+			sourceTree = "<group>";
+		};
+		AD195F4E25690A8E007DC5C7 /* Toolbar */ = {
+			isa = PBXGroup;
+			children = (
+				AD195F5425690AF7007DC5C7 /* StepCommand.swift */,
+				AD195F5725690B1B007DC5C7 /* DebuggerState.swift */,
+				AD195F5A25690B36007DC5C7 /* DebuggerTarget.swift */,
+			);
+			path = Toolbar;
+			sourceTree = "<group>";
+		};
+		AD195F4F25690AB4007DC5C7 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				AD195F5025690AC0007DC5C7 /* CommandButton.swift */,
+			);
+			path = Atoms;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,8 +223,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD195F5825690B1B007DC5C7 /* DebuggerState.swift in Sources */,
 				AD195F31256907C8007DC5C7 /* ContentView.swift in Sources */,
+				AD195F5125690AC0007DC5C7 /* CommandButton.swift in Sources */,
+				AD195F5B25690B36007DC5C7 /* DebuggerTarget.swift in Sources */,
 				AD195F2F256907C8007DC5C7 /* OrionApp.swift in Sources */,
+				AD195F5525690AF7007DC5C7 /* StepCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

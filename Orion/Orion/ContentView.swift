@@ -9,8 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        HStack {}.toolbar(content: {
+            ToolbarItemGroup {
+                StepCommand()
+            }
+            ToolbarItemGroup {
+                DebuggerState()
+            }
+            ToolbarItemGroup {
+                DebuggerTarget()
+            }
+        })
     }
 }
 
