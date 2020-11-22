@@ -6,12 +6,14 @@ import threading
 import http.server
 
 
+# lldb hook
 def __lldb_init_module(debugger: lldb.SBDebugger, _) -> None:
     print("✨ \033[92mOrion loaded\033[0m")
     print('🔥 \033[35mPress command "orion" to start data session\033[0m')
     debugger.HandleCommand("command script add -f launch.start orion")
 
 
+# start child thread for web server
 def start(debugger: lldb.SBDebugger, *args):
     tr = server_thread(debugger)
     tr.start()
@@ -29,6 +31,7 @@ class server_thread(threading.Thread):
         httpd.serve_forever()
 
 
+# handle all request
 def handle_request(debugger: lldb.SBDebugger):
     debuggerID = debugger.GetID()
 
@@ -47,7 +50,9 @@ def handle_request(debugger: lldb.SBDebugger):
             )
             self.send_response(200)
             self.end_headers()
-            self.wfile.write(json.dumps(res_data).encode(encoding="utf-8"))
+            self.wfile.write(
+                json.dumps(res_data, default=serialize).encode(encoding="utf-8")
+            )
             return
 
     return request_handler
@@ -58,4 +63,55 @@ def handle_ping(debugger: lldb.SBDebugger):
 
 
 def handle_report(debugger: lldb.SBDebugger):
-    return {"report": "report"}
+    return LLDBConnector(debugger)
+
+
+# serialize function for class to json
+def serialize(obj):
+    return dict(
+        (prop, getattr(obj, prop))
+        for prop in [
+            k
+            for k in obj.__class__.__dict__
+            if isinstance(obj.__class__.__dict__[k], property)
+        ]
+    )
+
+
+class LLDBConnector:
+    def __init__(self, debugger: lldb.SBDebugger) -> None:
+        self.debugger = debugger
+
+    @property
+    def targets(self):
+        return [
+            LLDBTarget(self.debugger.GetTargetAtIndex(i), i)
+            for i in range(self.debugger.GetNumTargets())
+        ]
+
+
+class LLDBTarget:
+    def __init__(self, target: lldb.SBTarget, index: int) -> None:
+        self.target = target
+        self.index = index
+
+    @property
+    def executable_name(self):
+        return str(self.target.GetExecutable())
+
+    @property
+    def target_index(self):
+        return self.index
+
+    @property
+    def modules(self):
+        return [LLDBModule(m) for m in self.target.modules]
+
+
+class LLDBModule:
+    def __init__(self, module: lldb.SBModule) -> None:
+        self.module = module
+
+    @property
+    def module_name(self):
+        return str(self.module.file)
