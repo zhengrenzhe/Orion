@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct OrionApp: App {
+    init() {
+        connectLLDB()
+    }
+
     var body: some Scene {
         WindowGroup {
             ContentView()

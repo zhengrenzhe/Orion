@@ -16,6 +16,9 @@
 		AD195F5525690AF7007DC5C7 /* StepCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD195F5425690AF7007DC5C7 /* StepCommand.swift */; };
 		AD195F5825690B1B007DC5C7 /* DebuggerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD195F5725690B1B007DC5C7 /* DebuggerState.swift */; };
 		AD195F5B25690B36007DC5C7 /* DebuggerTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD195F5A25690B36007DC5C7 /* DebuggerTarget.swift */; };
+		AD1A6545256A3B7000B3D0DC /* launch.py in Resources */ = {isa = PBXBuildFile; fileRef = AD1A6542256A3B7000B3D0DC /* launch.py */; };
+		AD1A6546256A3B7000B3D0DC /* settings.json in Resources */ = {isa = PBXBuildFile; fileRef = AD1A6544256A3B7000B3D0DC /* settings.json */; };
+		AD1A6549256A3F5900B3D0DC /* ConnectLLDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A6548256A3F5900B3D0DC /* ConnectLLDB.swift */; };
 		AD8B62B125696557009EB91F /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = AD8B62B025696557009EB91F /* index.html */; };
 		ADAB94F72569372E00B0F74C /* SourceCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB94F62569372E00B0F74C /* SourceCode.swift */; };
 		ADAB94FA256937F600B0F74C /* DisassembleCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB94F9256937F600B0F74C /* DisassembleCode.swift */; };
@@ -40,6 +43,9 @@
 		AD195F5425690AF7007DC5C7 /* StepCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCommand.swift; sourceTree = "<group>"; };
 		AD195F5725690B1B007DC5C7 /* DebuggerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggerState.swift; sourceTree = "<group>"; };
 		AD195F5A25690B36007DC5C7 /* DebuggerTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggerTarget.swift; sourceTree = "<group>"; };
+		AD1A6542256A3B7000B3D0DC /* launch.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = launch.py; sourceTree = "<group>"; };
+		AD1A6544256A3B7000B3D0DC /* settings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = settings.json; sourceTree = "<group>"; };
+		AD1A6548256A3F5900B3D0DC /* ConnectLLDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectLLDB.swift; sourceTree = "<group>"; };
 		AD8B62B025696557009EB91F /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = dist/index.html; sourceTree = "<group>"; };
 		ADAB94F62569372E00B0F74C /* SourceCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceCode.swift; sourceTree = "<group>"; };
 		ADAB94F9256937F600B0F74C /* DisassembleCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisassembleCode.swift; sourceTree = "<group>"; };
@@ -80,11 +86,13 @@
 		AD195F2D256907C8007DC5C7 /* Orion */ = {
 			isa = PBXGroup;
 			children = (
+				AD1A6541256A3B7000B3D0DC /* orionscripts */,
 				ADAB950B256940F600B0F74C /* monaco */,
 				AD195F4F25690AB4007DC5C7 /* Atoms */,
 				AD195F4E25690A8E007DC5C7 /* Toolbar */,
 				AD195F4C25690A64007DC5C7 /* Panels */,
 				AD195F2E256907C8007DC5C7 /* OrionApp.swift */,
+				AD1A6548256A3F5900B3D0DC /* ConnectLLDB.swift */,
 				AD195F30256907C8007DC5C7 /* ContentView.swift */,
 				AD195F32256907C9007DC5C7 /* Assets.xcassets */,
 				AD195F37256907C9007DC5C7 /* Info.plist */,
@@ -133,6 +141,23 @@
 				ADAB95082569404400B0F74C /* WebView.swift */,
 			);
 			path = Atoms;
+			sourceTree = "<group>";
+		};
+		AD1A6541256A3B7000B3D0DC /* orionscripts */ = {
+			isa = PBXGroup;
+			children = (
+				AD1A6542256A3B7000B3D0DC /* launch.py */,
+				AD1A6543256A3B7000B3D0DC /* .vscode */,
+			);
+			path = orionscripts;
+			sourceTree = "<group>";
+		};
+		AD1A6543256A3B7000B3D0DC /* .vscode */ = {
+			isa = PBXGroup;
+			children = (
+				AD1A6544256A3B7000B3D0DC /* settings.json */,
+			);
+			path = .vscode;
 			sourceTree = "<group>";
 		};
 		ADAB950B256940F600B0F74C /* monaco */ = {
@@ -203,6 +228,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD1A6546256A3B7000B3D0DC /* settings.json in Resources */,
+				AD1A6545256A3B7000B3D0DC /* launch.py in Resources */,
 				AD195F36256907C9007DC5C7 /* Preview Assets.xcassets in Resources */,
 				AD8B62B125696557009EB91F /* index.html in Resources */,
 				AD195F47256909E0007DC5C7 /* Localizable.strings in Resources */,
@@ -266,6 +293,7 @@
 				AD195F2F256907C8007DC5C7 /* OrionApp.swift in Sources */,
 				ADAB950625693AD200B0F74C /* Threads.swift in Sources */,
 				AD195F5525690AF7007DC5C7 /* StepCommand.swift in Sources */,
+				AD1A6549256A3F5900B3D0DC /* ConnectLLDB.swift in Sources */,
 				ADAB94FA256937F600B0F74C /* DisassembleCode.swift in Sources */,
 				ADAB9500256939FC00B0F74C /* Variables.swift in Sources */,
 				ADAB950325693A6E00B0F74C /* BreakPoints.swift in Sources */,
