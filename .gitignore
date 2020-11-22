@@ -93,3 +93,6 @@ node_modules
 dist
 .DS_Store
 .vscode
+debug_code/*.out
+debug_code/*.o
+debug_code/*.s
