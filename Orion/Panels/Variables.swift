@@ -9,7 +9,9 @@ import SwiftUI
 
 struct Variables: View {
     var body: some View {
-        Text("variables")
+        Panel(title: "variables") {
+            Text("variables")
+        }
     }
 }
 

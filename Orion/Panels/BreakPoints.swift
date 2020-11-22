@@ -9,7 +9,9 @@ import SwiftUI
 
 struct BreakPoints: View {
     var body: some View {
-        Text("breakpoints")
+        Panel(title: "breakpoints") {
+            Text("breakpoints")
+        }
     }
 }
 

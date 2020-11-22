@@ -16,3 +16,9 @@
 "debug-target" = "调试目标";
 "add-debug-target" = "添加调试目标";
 "state" = "调试器状态";
+"source-code" = "源代码";
+"disassemble-code" = "反汇编代码";
+"registers" = "寄存器";
+"variables" = "变量";
+"breakpoints" = "断点";
+"threads" = "线程";

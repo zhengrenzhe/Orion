@@ -9,7 +9,9 @@ import SwiftUI
 
 struct Threads: View {
     var body: some View {
-        Text("threads")
+        Panel(title: "threads") {
+            Text("threads")
+        }
     }
 }
 

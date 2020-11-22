@@ -9,7 +9,13 @@ import SwiftUI
 
 struct Register: View {
     var body: some View {
-        Text("register")
+        Panel(title: "registers") {
+            VStack {
+                CommandButton(title: "continue") {
+                    Image(systemName: "play.fill")
+                }
+            }
+        }
     }
 }
 

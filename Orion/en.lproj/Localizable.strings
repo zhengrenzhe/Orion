@@ -16,3 +16,9 @@
 "debug-target" = "Debug target";
 "add-debug-target" = "Add debug target";
 "state" = "Debugger state";
+"source-code" = "Source code";
+"disassemble-code" = "Disassemble code";
+"registers" = "Registers";
+"variables" = "Variables";
+"breakpoints" = "Breakpoints";
+"threads" = "Threads";

@@ -26,6 +26,9 @@
 		ADAB950325693A6E00B0F74C /* BreakPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB950225693A6E00B0F74C /* BreakPoints.swift */; };
 		ADAB950625693AD200B0F74C /* Threads.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB950525693AD200B0F74C /* Threads.swift */; };
 		ADAB95092569404400B0F74C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB95082569404400B0F74C /* WebView.swift */; };
+		ADE22FEE256A747E001A27E8 /* Panel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE22FED256A747E001A27E8 /* Panel.swift */; };
+		ADE22FF5256A7B59001A27E8 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE22FF4256A7B59001A27E8 /* Consts.swift */; };
+		ADE22FF8256A8CF6001A27E8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE22FF7256A8CF6001A27E8 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		ADAB950225693A6E00B0F74C /* BreakPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakPoints.swift; sourceTree = "<group>"; };
 		ADAB950525693AD200B0F74C /* Threads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Threads.swift; sourceTree = "<group>"; };
 		ADAB95082569404400B0F74C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		ADE22FED256A747E001A27E8 /* Panel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Panel.swift; sourceTree = "<group>"; };
+		ADE22FF4256A7B59001A27E8 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		ADE22FF7256A8CF6001A27E8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,8 @@
 				AD195F2E256907C8007DC5C7 /* OrionApp.swift */,
 				AD1A6548256A3F5900B3D0DC /* ConnectLLDB.swift */,
 				AD195F30256907C8007DC5C7 /* ContentView.swift */,
+				ADE22FF4256A7B59001A27E8 /* Consts.swift */,
+				ADE22FF7256A8CF6001A27E8 /* Extensions.swift */,
 				AD195F32256907C9007DC5C7 /* Assets.xcassets */,
 				AD195F37256907C9007DC5C7 /* Info.plist */,
 				AD195F38256907C9007DC5C7 /* Orion.entitlements */,
@@ -137,6 +145,7 @@
 			children = (
 				AD195F5025690AC0007DC5C7 /* CommandButton.swift */,
 				ADAB95082569404400B0F74C /* WebView.swift */,
+				ADE22FED256A747E001A27E8 /* Panel.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -272,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD195F5825690B1B007DC5C7 /* DebuggerState.swift in Sources */,
+				ADE22FF5256A7B59001A27E8 /* Consts.swift in Sources */,
 				AD195F31256907C8007DC5C7 /* ContentView.swift in Sources */,
 				ADAB95092569404400B0F74C /* WebView.swift in Sources */,
 				AD195F5125690AC0007DC5C7 /* CommandButton.swift in Sources */,
@@ -282,7 +292,9 @@
 				ADAB950625693AD200B0F74C /* Threads.swift in Sources */,
 				AD195F5525690AF7007DC5C7 /* StepCommand.swift in Sources */,
 				AD1A6549256A3F5900B3D0DC /* ConnectLLDB.swift in Sources */,
+				ADE22FEE256A747E001A27E8 /* Panel.swift in Sources */,
 				ADAB94FA256937F600B0F74C /* DisassembleCode.swift in Sources */,
+				ADE22FF8256A8CF6001A27E8 /* Extensions.swift in Sources */,
 				ADAB9500256939FC00B0F74C /* Variables.swift in Sources */,
 				ADAB950325693A6E00B0F74C /* BreakPoints.swift in Sources */,
 			);
