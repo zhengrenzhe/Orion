@@ -5,6 +5,44 @@ import json
 import threading
 import http.server
 
+LANG_MAP = dict(
+    [
+        (lldb.eLanguageTypeAda83, "Ada"),
+        (lldb.eLanguageTypeAda95, "Ada"),
+        (lldb.eLanguageTypeC, "C"),
+        (lldb.eLanguageTypeC11, "C"),
+        (lldb.eLanguageTypeC89, "C"),
+        (lldb.eLanguageTypeC99, "C"),
+        (lldb.eLanguageTypeC_plus_plus, "C_plus_plus"),
+        (lldb.eLanguageTypeC_plus_plus_03, "C_plus_plus"),
+        (lldb.eLanguageTypeC_plus_plus_11, "C_plus_plus"),
+        (lldb.eLanguageTypeC_plus_plus_14, "C_plus_plus"),
+        (lldb.eLanguageTypeCobol74, "Cobol"),
+        (lldb.eLanguageTypeCobol85, "Cobol"),
+        (lldb.eLanguageTypeD, "D"),
+        (lldb.eLanguageTypeFortran03, "Fortran"),
+        (lldb.eLanguageTypeFortran08, "Fortran"),
+        (lldb.eLanguageTypeFortran77, "Fortran"),
+        (lldb.eLanguageTypeFortran90, "Fortran"),
+        (lldb.eLanguageTypeFortran95, "Fortran"),
+        (lldb.eLanguageTypeGo, "Go"),
+        (lldb.eLanguageTypeHaskell, "Haskell"),
+        (lldb.eLanguageTypeJava, "Java"),
+        (lldb.eLanguageTypeJulia, "Julia"),
+        (lldb.eLanguageTypeMipsAssembler, "MipsAssembler"),
+        (lldb.eLanguageTypeObjC, "ObjC"),
+        (lldb.eLanguageTypeObjC_plus_plus, "C_plus_plus"),
+        (lldb.eLanguageTypeOCaml, "OCaml"),
+        (lldb.eLanguageTypeOpenCL, "OpenCL"),
+        (lldb.eLanguageTypePascal83, "Pascal"),
+        (lldb.eLanguageTypePython, "Python"),
+        (lldb.eLanguageTypePLI, "PLI"),
+        (lldb.eLanguageTypeRust, "Rust"),
+        (lldb.eLanguageTypeSwift, "Swift"),
+        (lldb.eLanguageTypeUnknown, "Unknown"),
+    ]
+)
+
 
 # lldb hook
 def __lldb_init_module(debugger: lldb.SBDebugger, _) -> None:
@@ -115,3 +153,23 @@ class LLDBModule:
     @property
     def module_name(self):
         return str(self.module.file)
+
+    @property
+    def compile_units(self):
+        return [
+            LLDBCompileUnit(self.module.GetCompileUnitAtIndex(i))
+            for i in range(self.module.GetNumCompileUnits())
+        ]
+
+
+class LLDBCompileUnit:
+    def __init__(self, unit: lldb.SBCompileUnit) -> None:
+        self.unit = unit
+
+    @property
+    def file(self):
+        return str(self.unit.file)
+
+    @property
+    def language(self):
+        return LANG_MAP.get(self.unit.GetLanguage(), "Unknown")
