@@ -94,7 +94,7 @@ def handle_request(debugger: lldb.SBDebugger):
     debuggerID = debugger.GetID()
 
     class request_handler(http.server.SimpleHTTPRequestHandler):
-        handler_map = {"/ping": handle_ping, "/report": handle_report}
+        handler_map = {"/ping": handle_ping, "/summary": handle_summary}
 
         def log_message(self, format: str, *args) -> None:
             pass
@@ -133,7 +133,7 @@ def handle_ping(debugger: lldb.SBDebugger):
     return {"pong": "pong"}
 
 
-def handle_report(debugger: lldb.SBDebugger):
+def handle_summary(debugger: lldb.SBDebugger):
     return LLDBConnector(debugger)
 
 
@@ -178,16 +178,16 @@ class LLDBTarget:
         self.index = index
 
     @property
-    def executable_name(self):
+    def executableName(self):
         return str(self.target.GetExecutable())
 
     @property
-    def target_index(self):
-        return self.index
+    def targetIndex(self):
+        return int(self.index)
 
     @property
-    def target_platform(self):
-        return self.target.GetTriple()
+    def targetPlatform(self):
+        return str(self.target.GetTriple())
 
     @property
     def modules(self):
@@ -199,11 +199,11 @@ class LLDBModule:
         self.module = module
 
     @property
-    def module_name(self):
+    def moduleName(self):
         return str(self.module.file)
 
     @property
-    def compile_units(self):
+    def compileUnits(self):
         return [
             LLDBCompileUnit(self.module.GetCompileUnitAtIndex(i))
             for i in range(self.module.GetNumCompileUnits())
@@ -215,7 +215,7 @@ class LLDBCompileUnit:
         self.unit = unit
 
     @property
-    def file(self):
+    def filePath(self):
         return str(self.unit.file)
 
     @property

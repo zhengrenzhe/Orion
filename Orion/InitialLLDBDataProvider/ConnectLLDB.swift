@@ -7,7 +7,7 @@
 
 import Foundation
 
-func connectLLDB() {
+func initialLLDBDataProvider() {
     if let pythonLaunchFile = Bundle.main.path(forResource: "launch", ofType: "py") {
         let homePath = FileManager.default.homeDirectoryForCurrentUser
         let lldbinitFilePath = homePath.appendingPathComponent(".lldbinit")

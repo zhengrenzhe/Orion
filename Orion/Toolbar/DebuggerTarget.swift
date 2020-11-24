@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct DebuggerTarget: View {
+    @EnvironmentObject private var LLDBSummary: LLDBSummary
+
     var body: some View {
         HStack {
-            Picker(selection: .constant(1), label: Text("Picker"), content: {
-                Text("/Users/zhensxdbgui/func").tag(1)
-                Text("/Users/zhengrenzhe/Code/lldbgui/func").tag(2)
+            Picker(selection: $LLDBSummary.currentTargetIndex, label: Text("debug-target"), content: {
+                if let targets = LLDBSummary.content?.targets {
+                    ForEach(targets, id: \.targetIndex) { target in
+                        Text("\(target.executableName)").tag("\(target.targetIndex)")
+                    }
+                } else {
+                    Text("/Users/zhengrenzhe/Code/Orion/debug_code/a.out").tag(1)
+                }
             })
-                .frame(maxWidth: 200, alignment: .leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .help("debug-target")
             CommandButton(title: "add-debug-target") {
                 Image(systemName: "plus")

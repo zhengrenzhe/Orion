@@ -24,3 +24,4 @@
 "threads" = "线程";
 "general" = "通用";
 "darkMode" = "黑暗模式";
+"no-target" = "无调试目标";

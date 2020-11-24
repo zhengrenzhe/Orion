@@ -7,4 +7,9 @@
 
 import Foundation
 
+// ui
 let panelTitleHeight: CGFloat = 20
+
+// api
+let apiBase = "http://localhost:9000"
+let summaryAddress = "\(apiBase)/summary"

@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct OrionApp: App {
     init() {
-        connectLLDB()
+        initialLLDBDataProvider()
     }
 
     var body: some Scene {
@@ -21,6 +21,7 @@ struct OrionApp: App {
                     minHeight: 0, idealHeight: 200, maxHeight: .infinity,
                     alignment: .center
                 )
+                .environmentObject(LLDBSummary())
         }.windowToolbarStyle(UnifiedCompactWindowToolbarStyle(showsTitle: false))
 
         Settings {
