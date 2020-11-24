@@ -186,6 +186,10 @@ class LLDBTarget:
         return self.index
 
     @property
+    def target_platform(self):
+        return self.target.GetTriple()
+
+    @property
     def modules(self):
         return [LLDBModule(m) for m in self.target.modules]
 
