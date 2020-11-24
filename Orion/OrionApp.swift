@@ -16,12 +16,15 @@ struct OrionApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-//                .preferredColorScheme(.dark)
                 .frame(
                     minWidth: 0, idealWidth: 320, maxWidth: .infinity,
                     minHeight: 0, idealHeight: 200, maxHeight: .infinity,
                     alignment: .center
                 )
         }.windowToolbarStyle(UnifiedCompactWindowToolbarStyle(showsTitle: false))
+
+        Settings {
+            SettingsView()
+        }
     }
 }

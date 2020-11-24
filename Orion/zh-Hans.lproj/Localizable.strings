@@ -22,3 +22,5 @@
 "variables" = "变量";
 "breakpoints" = "断点";
 "threads" = "线程";
+"general" = "通用";
+"darkMode" = "黑暗模式";

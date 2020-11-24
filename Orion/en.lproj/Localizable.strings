@@ -22,3 +22,5 @@
 "variables" = "Variables";
 "breakpoints" = "Breakpoints";
 "threads" = "Threads";
+"general" = "General";
+"darkMode" = "Dark Mode";
