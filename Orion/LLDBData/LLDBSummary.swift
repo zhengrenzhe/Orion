@@ -6,17 +6,19 @@
 //
 
 import Combine
-import Foundation
 import SwiftUI
 
 class LLDBSummary: ObservableObject {
-    @Published var content: LLDBSummaryModel?
-    @Published var currentTargetIndex = 0
+    // has debug target
+    @Published var hasTarget = false
+    // debug targets
+    @Published var targets: [LLDBTargetModel]?
 
     init() {
-        Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { _ in
+        Timer.scheduledTimer(withTimeInterval: fetchFrequency, repeats: true) { _ in
             fetchSummary { summary in
-                self.content = summary
+                self.hasTarget = !summary.targets.isEmpty
+                self.targets = summary.targets
             }
         }
     }

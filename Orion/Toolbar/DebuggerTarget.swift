@@ -9,20 +9,31 @@ import SwiftUI
 
 struct DebuggerTarget: View {
     @EnvironmentObject private var LLDBSummary: LLDBSummary
+    @EnvironmentObject private var INNERState: InnerState
+
+    private var showTargets: Binding<Bool> { Binding(
+        get: { INNERState.connected && LLDBSummary.hasTarget },
+        set: { _ in }
+    )
+    }
 
     var body: some View {
         HStack {
-            Picker(selection: $LLDBSummary.currentTargetIndex, label: Text("debug-target"), content: {
-                if let targets = LLDBSummary.content?.targets {
-                    ForEach(targets, id: \.targetIndex) { target in
-                        Text("\(target.executableName)").tag("\(target.targetIndex)")
+            Picker(selection: $INNERState.currentTargetIndex, label: Text("debug-target"), content: {
+                if showTargets.wrappedValue {
+                    if let targets = LLDBSummary.targets {
+                        ForEach(targets, id: \.targetIndex) { target in
+                            Text("\(target.executableName)").tag("\(target.targetIndex)")
+                        }
                     }
                 } else {
-                    Text("/Users/zhengrenzhe/Code/Orion/debug_code/a.out").tag(1)
+                    Text("no-target").tag(INNERState.currentTargetIndex)
                 }
+
             })
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .help("debug-target")
+                .disabled(!showTargets.wrappedValue)
             CommandButton(title: "add-debug-target") {
                 Image(systemName: "plus")
             }

@@ -32,6 +32,7 @@
 		ADAB95092569404400B0F74C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAB95082569404400B0F74C /* WebView.swift */; };
 		ADABB8AD256D2CFB00934099 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADABB8AC256D2CFB00934099 /* Model.swift */; };
 		ADABB8B1256D31DC00934099 /* LLDBSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADABB8B0256D31DC00934099 /* LLDBSummary.swift */; };
+		ADABB8B4256EA04300934099 /* InnerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADABB8B3256EA04300934099 /* InnerState.swift */; };
 		ADE22FEE256A747E001A27E8 /* Panel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE22FED256A747E001A27E8 /* Panel.swift */; };
 		ADE22FF5256A7B59001A27E8 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE22FF4256A7B59001A27E8 /* Consts.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		ADAB95082569404400B0F74C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		ADABB8AC256D2CFB00934099 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		ADABB8B0256D31DC00934099 /* LLDBSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLDBSummary.swift; sourceTree = "<group>"; };
+		ADABB8B3256EA04300934099 /* InnerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerState.swift; sourceTree = "<group>"; };
 		ADE22FED256A747E001A27E8 /* Panel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Panel.swift; sourceTree = "<group>"; };
 		ADE22FF4256A7B59001A27E8 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +178,7 @@
 				ADA950BD256D29C2009BB077 /* Fetch.swift */,
 				ADABB8AC256D2CFB00934099 /* Model.swift */,
 				ADABB8B0256D31DC00934099 /* LLDBSummary.swift */,
+				ADABB8B3256EA04300934099 /* InnerState.swift */,
 			);
 			path = LLDBData;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				ADE22FEE256A747E001A27E8 /* Panel.swift in Sources */,
 				ADABB8B1256D31DC00934099 /* LLDBSummary.swift in Sources */,
 				ADAB94FA256937F600B0F74C /* DisassembleCode.swift in Sources */,
+				ADABB8B4256EA04300934099 /* InnerState.swift in Sources */,
 				ADAB9500256939FC00B0F74C /* Variables.swift in Sources */,
 				ADAB950325693A6E00B0F74C /* BreakPoints.swift in Sources */,
 				AD90D264256CF78F00E38109 /* SettingsView.swift in Sources */,

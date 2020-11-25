@@ -23,5 +23,7 @@
 "breakpoints" = "Breakpoints";
 "threads" = "Threads";
 "general" = "General";
-"darkMode" = "Dark Mode";
-"no-target" = "No Debug Target";
+"darkMode" = "Dark mode";
+"no-target" = "No debug target";
+"lldb-not-connected" = "LLDB not connected";
+"lldb-connected" = "LLDB connected";

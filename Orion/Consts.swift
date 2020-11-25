@@ -11,5 +11,8 @@ import Foundation
 let panelTitleHeight: CGFloat = 20
 
 // api
+let fetchFrequency = 0.3
+
 let apiBase = "http://localhost:9000"
 let summaryAddress = "\(apiBase)/summary"
+let pingAddress = "\(apiBase)/ping"

@@ -22,6 +22,7 @@ struct OrionApp: App {
                     alignment: .center
                 )
                 .environmentObject(LLDBSummary())
+                .environmentObject(InnerState())
         }.windowToolbarStyle(UnifiedCompactWindowToolbarStyle(showsTitle: false))
 
         Settings {

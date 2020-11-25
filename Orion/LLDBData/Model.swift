@@ -6,22 +6,22 @@
 //
 
 struct LLDBCompileUnitModel: Decodable {
-    let filePath: String
-    let language: String
+    var filePath: String
+    var language: String
 }
 
 struct LLDBModuleModel: Decodable {
-    let moduleName: String
-    let compileUnits: [LLDBCompileUnitModel]
+    var moduleName: String
+    var compileUnits: [LLDBCompileUnitModel]
 }
 
 struct LLDBTargetModel: Decodable {
-    let executableName: String
-    let targetIndex: Int
-    let targetPlatform: String
-    let modules: [LLDBModuleModel]
+    var executableName: String
+    var targetIndex: Int
+    var targetPlatform: String
+    var modules: [LLDBModuleModel]
 }
 
 struct LLDBSummaryModel: Decodable {
-    let targets: [LLDBTargetModel]
+    var targets: [LLDBTargetModel]
 }

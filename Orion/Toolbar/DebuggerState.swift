@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct DebuggerState: View {
+    @EnvironmentObject private var INNERState: InnerState
+
     var body: some View {
-        Text("hello world")
+        Text(INNERState.connected ? "lldb-connected" : "lldb-not-connected")
             .frame(width: 320, alignment: .leading)
             .font(.system(size: 12, weight: .light, design: .rounded))
             .padding(.horizontal, 12)

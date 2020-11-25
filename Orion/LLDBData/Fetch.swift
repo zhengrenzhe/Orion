@@ -14,3 +14,12 @@ func fetchSummary(callback: @escaping (LLDBSummaryModel) -> Void) {
         }
     }
 }
+
+func fetchPing(callback: @escaping (Bool) -> Void) {
+    AF.request(pingAddress).response { res in
+        if let code = res.response?.statusCode {
+            return callback(code == 200)
+        }
+        callback(false)
+    }
+}
