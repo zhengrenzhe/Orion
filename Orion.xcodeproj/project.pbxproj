@@ -33,9 +33,20 @@
 		ADABB8AD256D2CFB00934099 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADABB8AC256D2CFB00934099 /* Model.swift */; };
 		ADABB8B1256D31DC00934099 /* LLDBSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADABB8B0256D31DC00934099 /* LLDBSummary.swift */; };
 		ADABB8B4256EA04300934099 /* InnerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADABB8B3256EA04300934099 /* InnerState.swift */; };
+		ADABB8CB256EB3A000934099 /* CacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADABB8CA256EB3A000934099 /* CacheTest.swift */; };
 		ADE22FEE256A747E001A27E8 /* Panel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE22FED256A747E001A27E8 /* Panel.swift */; };
 		ADE22FF5256A7B59001A27E8 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE22FF4256A7B59001A27E8 /* Consts.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ADABB8C3256EB28100934099 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD195F23256907C8007DC5C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD195F2A256907C8007DC5C7;
+			remoteInfo = Orion;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AD195F2B256907C8007DC5C7 /* Orion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orion.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +78,9 @@
 		ADABB8AC256D2CFB00934099 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		ADABB8B0256D31DC00934099 /* LLDBSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLDBSummary.swift; sourceTree = "<group>"; };
 		ADABB8B3256EA04300934099 /* InnerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerState.swift; sourceTree = "<group>"; };
+		ADABB8BE256EB28100934099 /* OrionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADABB8C2256EB28100934099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADABB8CA256EB3A000934099 /* CacheTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTest.swift; sourceTree = "<group>"; };
 		ADE22FED256A747E001A27E8 /* Panel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Panel.swift; sourceTree = "<group>"; };
 		ADE22FF4256A7B59001A27E8 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +94,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ADABB8BB256EB28100934099 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -87,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				AD195F2D256907C8007DC5C7 /* Orion */,
+				ADABB8BF256EB28100934099 /* OrionTests */,
 				AD195F2C256907C8007DC5C7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				AD195F2B256907C8007DC5C7 /* Orion.app */,
+				ADABB8BE256EB28100934099 /* OrionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,6 +222,15 @@
 			path = monaco;
 			sourceTree = "<group>";
 		};
+		ADABB8BF256EB28100934099 /* OrionTests */ = {
+			isa = PBXGroup;
+			children = (
+				ADABB8CA256EB3A000934099 /* CacheTest.swift */,
+				ADABB8C2256EB28100934099 /* Info.plist */,
+			);
+			path = OrionTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,6 +256,24 @@
 			productReference = AD195F2B256907C8007DC5C7 /* Orion.app */;
 			productType = "com.apple.product-type.application";
 		};
+		ADABB8BD256EB28100934099 /* OrionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADABB8C5256EB28100934099 /* Build configuration list for PBXNativeTarget "OrionTests" */;
+			buildPhases = (
+				ADABB8BA256EB28100934099 /* Sources */,
+				ADABB8BB256EB28100934099 /* Frameworks */,
+				ADABB8BC256EB28100934099 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADABB8C4256EB28100934099 /* PBXTargetDependency */,
+			);
+			name = OrionTests;
+			productName = OrionTests;
+			productReference = ADABB8BE256EB28100934099 /* OrionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -235,6 +285,10 @@
 				TargetAttributes = {
 					AD195F2A256907C8007DC5C7 = {
 						CreatedOnToolsVersion = 12.2;
+					};
+					ADABB8BD256EB28100934099 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = AD195F2A256907C8007DC5C7;
 					};
 				};
 			};
@@ -256,6 +310,7 @@
 			projectRoot = "";
 			targets = (
 				AD195F2A256907C8007DC5C7 /* Orion */,
+				ADABB8BD256EB28100934099 /* OrionTests */,
 			);
 		};
 /* End PBXProject section */
@@ -270,6 +325,13 @@
 				AD8B62B125696557009EB91F /* index.html in Resources */,
 				AD195F47256909E0007DC5C7 /* Localizable.strings in Resources */,
 				AD195F33256907C9007DC5C7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADABB8BC256EB28100934099 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +406,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ADABB8BA256EB28100934099 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADABB8CB256EB3A000934099 /* CacheTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ADABB8C4256EB28100934099 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD195F2A256907C8007DC5C7 /* Orion */;
+			targetProxy = ADABB8C3256EB28100934099 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AD195F49256909E0007DC5C7 /* Localizable.strings */ = {
@@ -522,6 +600,46 @@
 			};
 			name = Release;
 		};
+		ADABB8C6256EB28100934099 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JN4QS7G6Y5;
+				INFOPLIST_FILE = OrionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhengrenzhe.OrionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orion.app/Contents/MacOS/Orion";
+			};
+			name = Debug;
+		};
+		ADABB8C7256EB28100934099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JN4QS7G6Y5;
+				INFOPLIST_FILE = OrionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhengrenzhe.OrionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orion.app/Contents/MacOS/Orion";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -539,6 +657,15 @@
 			buildConfigurations = (
 				AD195F3C256907C9007DC5C7 /* Debug */,
 				AD195F3D256907C9007DC5C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADABB8C5256EB28100934099 /* Build configuration list for PBXNativeTarget "OrionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADABB8C6256EB28100934099 /* Debug */,
+				ADABB8C7256EB28100934099 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
