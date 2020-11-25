@@ -9,7 +9,9 @@ import Combine
 import SwiftUI
 
 class InnerState: ObservableObject {
+    // is connected to lldb
     @Published var connected = false
+
     @Published var currentTargetIndex = 0
 
     init() {

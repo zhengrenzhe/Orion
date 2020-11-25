@@ -23,7 +23,9 @@ struct DebuggerTarget: View {
                 if showTargets.wrappedValue {
                     if let targets = LLDBSummary.targets {
                         ForEach(targets, id: \.targetIndex) { target in
-                            Text("\(target.executableName)").tag("\(target.targetIndex)")
+                            Text("\(target.executableName)")
+                                .truncationMode(.tail)
+                                .tag("\(target.targetIndex)")
                         }
                     }
                 } else {

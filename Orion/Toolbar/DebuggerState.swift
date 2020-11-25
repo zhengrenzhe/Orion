@@ -11,14 +11,19 @@ struct DebuggerState: View {
     @EnvironmentObject private var INNERState: InnerState
 
     var body: some View {
-        Text(INNERState.connected ? "lldb-connected" : "lldb-not-connected")
-            .frame(width: 320, alignment: .leading)
-            .font(.system(size: 12, weight: .light, design: .rounded))
-            .padding(.horizontal, 12)
-            .padding(.vertical, 4)
-            .background(Color.gray.opacity(0.15))
-            .cornerRadius(5)
-            .help("state")
+        HStack(spacing: 4) {
+            Circle()
+                .frame(width: 8, height: 8)
+                .foregroundColor(INNERState.connected ? Color.green : Color.red)
+            Text(INNERState.connected ? "lldb-connected" : "lldb-not-connected")
+                .font(.system(size: 12, weight: .light, design: .rounded))
+        }
+        .frame(width: 300, alignment: .leading)
+        .padding(.horizontal, 8)
+        .padding(.vertical, 4)
+        .background(Color.gray.opacity(0.15))
+        .cornerRadius(5)
+        .help("state")
     }
 }
 
