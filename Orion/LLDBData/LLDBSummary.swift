@@ -19,6 +19,16 @@ class LLDBSummary: ObservableObject {
             fetchSummary { summary in
                 self.hasTarget = !summary.targets.isEmpty
                 self.targets = summary.targets
+
+                self.targets?.forEach { target in
+                    target.modules.forEach { module in
+                        module.compileUnits.forEach { unit in
+                            DispatchQueue.global(qos: .background).async {
+                                Files.loadFile(filePath: unit.filePath)
+                            }
+                        }
+                    }
+                }
             }
         }
     }

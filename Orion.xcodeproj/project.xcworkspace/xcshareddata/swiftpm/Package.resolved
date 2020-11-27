@@ -9,6 +9,33 @@
           "revision": "9e0328127dfb801cefe8ac53a13c0c90a7770448",
           "version": "5.4.0"
         }
+      },
+      {
+        "package": "Cache",
+        "repositoryURL": "https://github.com/hyperoslo/Cache.git",
+        "state": {
+          "branch": null,
+          "revision": "c7f4d633049c3bd649a353bad36f6c17e9df085f",
+          "version": "6.0.0"
+        }
+      },
+      {
+        "package": "FileKit",
+        "repositoryURL": "https://github.com/nvzqz/FileKit.git",
+        "state": {
+          "branch": null,
+          "revision": "826d9161b184509f80d85c28cd612d630646de98",
+          "version": "6.0.0"
+        }
+      },
+      {
+        "package": "SwiftEventBus",
+        "repositoryURL": "https://github.com/cesarferreira/SwiftEventBus.git",
+        "state": {
+          "branch": null,
+          "revision": "cea5121162d88f233f392f63acbc8468fdd77927",
+          "version": "5.0.1"
+        }
       }
     ]
   },

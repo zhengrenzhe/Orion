@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD0693DC25700C7400A42C9B /* FileKit in Frameworks */ = {isa = PBXBuildFile; productRef = AD0693DB25700C7400A42C9B /* FileKit */; };
+		AD0693E125700C9E00A42C9B /* SwiftEventBus in Frameworks */ = {isa = PBXBuildFile; productRef = AD0693E025700C9E00A42C9B /* SwiftEventBus */; };
 		AD195F2F256907C8007DC5C7 /* OrionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD195F2E256907C8007DC5C7 /* OrionApp.swift */; };
 		AD195F31256907C8007DC5C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD195F30256907C8007DC5C7 /* ContentView.swift */; };
 		AD195F33256907C9007DC5C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD195F32256907C9007DC5C7 /* Assets.xcassets */; };
@@ -18,6 +20,7 @@
 		AD195F5B25690B36007DC5C7 /* DebuggerTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD195F5A25690B36007DC5C7 /* DebuggerTarget.swift */; };
 		AD1A6545256A3B7000B3D0DC /* launch.py in Resources */ = {isa = PBXBuildFile; fileRef = AD1A6542256A3B7000B3D0DC /* launch.py */; };
 		AD1A6549256A3F5900B3D0DC /* ConnectLLDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A6548256A3F5900B3D0DC /* ConnectLLDB.swift */; };
+		AD814EFD2571585600C515AB /* Cache in Frameworks */ = {isa = PBXBuildFile; productRef = AD814EFC2571585600C515AB /* Cache */; };
 		AD8B62B125696557009EB91F /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = AD8B62B025696557009EB91F /* index.html */; };
 		AD90D264256CF78F00E38109 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD90D263256CF78F00E38109 /* SettingsView.swift */; };
 		AD90D26A256CFF6500E38109 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD90D269256CFF6500E38109 /* UserSettings.swift */; };
@@ -36,6 +39,7 @@
 		ADABB8CB256EB3A000934099 /* CacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADABB8CA256EB3A000934099 /* CacheTest.swift */; };
 		ADE22FEE256A747E001A27E8 /* Panel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE22FED256A747E001A27E8 /* Panel.swift */; };
 		ADE22FF5256A7B59001A27E8 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE22FF4256A7B59001A27E8 /* Consts.swift */; };
+		ADF1BF66257138AE0014360B /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF1BF65257138AE0014360B /* Files.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,7 @@
 		ADABB8CA256EB3A000934099 /* CacheTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTest.swift; sourceTree = "<group>"; };
 		ADE22FED256A747E001A27E8 /* Panel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Panel.swift; sourceTree = "<group>"; };
 		ADE22FF4256A7B59001A27E8 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		ADF1BF65257138AE0014360B /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +96,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD9A812B256D0A4400D9B357 /* Alamofire in Frameworks */,
+				AD814EFD2571585600C515AB /* Cache in Frameworks */,
+				AD0693DC25700C7400A42C9B /* FileKit in Frameworks */,
+				AD0693E125700C9E00A42C9B /* SwiftEventBus in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +210,7 @@
 				ADABB8AC256D2CFB00934099 /* Model.swift */,
 				ADABB8B0256D31DC00934099 /* LLDBSummary.swift */,
 				ADABB8B3256EA04300934099 /* InnerState.swift */,
+				ADF1BF65257138AE0014360B /* Files.swift */,
 			);
 			path = LLDBData;
 			sourceTree = "<group>";
@@ -251,6 +260,9 @@
 			name = Orion;
 			packageProductDependencies = (
 				AD9A812A256D0A4400D9B357 /* Alamofire */,
+				AD0693DB25700C7400A42C9B /* FileKit */,
+				AD0693E025700C9E00A42C9B /* SwiftEventBus */,
+				AD814EFC2571585600C515AB /* Cache */,
 			);
 			productName = Orion;
 			productReference = AD195F2B256907C8007DC5C7 /* Orion.app */;
@@ -304,6 +316,9 @@
 			mainGroup = AD195F22256907C8007DC5C7;
 			packageReferences = (
 				AD9A8129256D0A4400D9B357 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				AD0693DA25700C7400A42C9B /* XCRemoteSwiftPackageReference "FileKit" */,
+				AD0693DF25700C9E00A42C9B /* XCRemoteSwiftPackageReference "SwiftEventBus" */,
+				AD814EFB2571585600C515AB /* XCRemoteSwiftPackageReference "Cache" */,
 			);
 			productRefGroup = AD195F2C256907C8007DC5C7 /* Products */;
 			projectDirPath = "";
@@ -387,6 +402,7 @@
 				AD195F31256907C8007DC5C7 /* ContentView.swift in Sources */,
 				ADAB95092569404400B0F74C /* WebView.swift in Sources */,
 				AD195F5125690AC0007DC5C7 /* CommandButton.swift in Sources */,
+				ADF1BF66257138AE0014360B /* Files.swift in Sources */,
 				ADAB94FD2569393600B0F74C /* Register.swift in Sources */,
 				ADABB8AD256D2CFB00934099 /* Model.swift in Sources */,
 				AD195F5B25690B36007DC5C7 /* DebuggerTarget.swift in Sources */,
@@ -673,6 +689,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AD0693DA25700C7400A42C9B /* XCRemoteSwiftPackageReference "FileKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nvzqz/FileKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		AD0693DF25700C9E00A42C9B /* XCRemoteSwiftPackageReference "SwiftEventBus" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cesarferreira/SwiftEventBus.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		AD814EFB2571585600C515AB /* XCRemoteSwiftPackageReference "Cache" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hyperoslo/Cache.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		AD9A8129256D0A4400D9B357 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -684,6 +724,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AD0693DB25700C7400A42C9B /* FileKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD0693DA25700C7400A42C9B /* XCRemoteSwiftPackageReference "FileKit" */;
+			productName = FileKit;
+		};
+		AD0693E025700C9E00A42C9B /* SwiftEventBus */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD0693DF25700C9E00A42C9B /* XCRemoteSwiftPackageReference "SwiftEventBus" */;
+			productName = SwiftEventBus;
+		};
+		AD814EFC2571585600C515AB /* Cache */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD814EFB2571585600C515AB /* XCRemoteSwiftPackageReference "Cache" */;
+			productName = Cache;
+		};
 		AD9A812A256D0A4400D9B357 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AD9A8129256D0A4400D9B357 /* XCRemoteSwiftPackageReference "Alamofire" */;
