@@ -6,10 +6,24 @@
 //
 
 import Cache
+import Combine
 import FileKit
 import Foundation
+import SwiftEventBus
 
-struct Files {
+class FileStoreList: ObservableObject {
+    @Published var files: [String] = []
+
+    init() {
+        SwiftEventBus.onBackgroundThread(self, name: loadFileSuccess) { res in
+            if let filePath = res?.object {
+                self.files.append("\(filePath)")
+            }
+        }
+    }
+}
+
+enum FileStore {
     private static let fileCache = MemoryStorage<String, String>(
         config: MemoryConfig(expiry: .never, countLimit: 100, totalCostLimit: 100))
 
@@ -22,11 +36,12 @@ struct Files {
         var fileContent = ""
         do {
             try fileContent = file.read()
+            fileCache.setObject(fileContent, forKey: filePath)
+            SwiftEventBus.post(loadFileSuccess, sender: filePath)
+            print("load file \(filePath) success")
         } catch {
             print("load file \(filePath) error")
         }
-        print("load file \(filePath) success")
-        fileCache.setObject(fileContent, forKey: filePath)
     }
 
     static func hasFile(filePath: String) -> Bool {

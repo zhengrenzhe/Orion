@@ -18,6 +18,7 @@
 "state" = "Debugger state";
 "source-code" = "Source code";
 "disassemble-code" = "Disassemble code";
+"files" = "Source files";
 "registers" = "Registers";
 "variables" = "Variables";
 "breakpoints" = "Breakpoints";

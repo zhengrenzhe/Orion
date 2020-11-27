@@ -21,6 +21,7 @@
 		AD1A6545256A3B7000B3D0DC /* launch.py in Resources */ = {isa = PBXBuildFile; fileRef = AD1A6542256A3B7000B3D0DC /* launch.py */; };
 		AD1A6549256A3F5900B3D0DC /* ConnectLLDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A6548256A3F5900B3D0DC /* ConnectLLDB.swift */; };
 		AD814EFD2571585600C515AB /* Cache in Frameworks */ = {isa = PBXBuildFile; productRef = AD814EFC2571585600C515AB /* Cache */; };
+		AD814F0325715DD400C515AB /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD814F0225715DD400C515AB /* Files.swift */; };
 		AD8B62B125696557009EB91F /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = AD8B62B025696557009EB91F /* index.html */; };
 		AD90D264256CF78F00E38109 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD90D263256CF78F00E38109 /* SettingsView.swift */; };
 		AD90D26A256CFF6500E38109 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD90D269256CFF6500E38109 /* UserSettings.swift */; };
@@ -39,7 +40,7 @@
 		ADABB8CB256EB3A000934099 /* CacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADABB8CA256EB3A000934099 /* CacheTest.swift */; };
 		ADE22FEE256A747E001A27E8 /* Panel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE22FED256A747E001A27E8 /* Panel.swift */; };
 		ADE22FF5256A7B59001A27E8 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE22FF4256A7B59001A27E8 /* Consts.swift */; };
-		ADF1BF66257138AE0014360B /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF1BF65257138AE0014360B /* Files.swift */; };
+		ADF1BF66257138AE0014360B /* FileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF1BF65257138AE0014360B /* FileStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		AD195F5A25690B36007DC5C7 /* DebuggerTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggerTarget.swift; sourceTree = "<group>"; };
 		AD1A6542256A3B7000B3D0DC /* launch.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = launch.py; sourceTree = "<group>"; };
 		AD1A6548256A3F5900B3D0DC /* ConnectLLDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectLLDB.swift; sourceTree = "<group>"; };
+		AD814F0225715DD400C515AB /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
 		AD8B62B025696557009EB91F /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = dist/index.html; sourceTree = "<group>"; };
 		AD90D263256CF78F00E38109 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AD90D269256CFF6500E38109 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
@@ -87,7 +89,7 @@
 		ADABB8CA256EB3A000934099 /* CacheTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTest.swift; sourceTree = "<group>"; };
 		ADE22FED256A747E001A27E8 /* Panel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Panel.swift; sourceTree = "<group>"; };
 		ADE22FF4256A7B59001A27E8 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
-		ADF1BF65257138AE0014360B /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
+		ADF1BF65257138AE0014360B /* FileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				ADAB94FF256939FC00B0F74C /* Variables.swift */,
 				ADAB950225693A6E00B0F74C /* BreakPoints.swift */,
 				ADAB950525693AD200B0F74C /* Threads.swift */,
+				AD814F0225715DD400C515AB /* Files.swift */,
 			);
 			path = Panels;
 			sourceTree = "<group>";
@@ -210,7 +213,7 @@
 				ADABB8AC256D2CFB00934099 /* Model.swift */,
 				ADABB8B0256D31DC00934099 /* LLDBSummary.swift */,
 				ADABB8B3256EA04300934099 /* InnerState.swift */,
-				ADF1BF65257138AE0014360B /* Files.swift */,
+				ADF1BF65257138AE0014360B /* FileStore.swift */,
 			);
 			path = LLDBData;
 			sourceTree = "<group>";
@@ -402,7 +405,7 @@
 				AD195F31256907C8007DC5C7 /* ContentView.swift in Sources */,
 				ADAB95092569404400B0F74C /* WebView.swift in Sources */,
 				AD195F5125690AC0007DC5C7 /* CommandButton.swift in Sources */,
-				ADF1BF66257138AE0014360B /* Files.swift in Sources */,
+				ADF1BF66257138AE0014360B /* FileStore.swift in Sources */,
 				ADAB94FD2569393600B0F74C /* Register.swift in Sources */,
 				ADABB8AD256D2CFB00934099 /* Model.swift in Sources */,
 				AD195F5B25690B36007DC5C7 /* DebuggerTarget.swift in Sources */,
@@ -413,6 +416,7 @@
 				AD195F5525690AF7007DC5C7 /* StepCommand.swift in Sources */,
 				AD1A6549256A3F5900B3D0DC /* ConnectLLDB.swift in Sources */,
 				ADE22FEE256A747E001A27E8 /* Panel.swift in Sources */,
+				AD814F0325715DD400C515AB /* Files.swift in Sources */,
 				ADABB8B1256D31DC00934099 /* LLDBSummary.swift in Sources */,
 				ADAB94FA256937F600B0F74C /* DisassembleCode.swift in Sources */,
 				ADABB8B4256EA04300934099 /* InnerState.swift in Sources */,

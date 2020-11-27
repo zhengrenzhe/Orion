@@ -24,7 +24,7 @@ class LLDBSummary: ObservableObject {
                     target.modules.forEach { module in
                         module.compileUnits.forEach { unit in
                             DispatchQueue.global(qos: .background).async {
-                                Files.loadFile(filePath: unit.filePath)
+                                FileStore.loadFile(filePath: unit.filePath)
                             }
                         }
                     }
