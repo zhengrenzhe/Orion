@@ -19,3 +19,4 @@ let pingAddress = "\(apiBase)/ping"
 
 // events
 let loadFileSuccess = "loadFileSuccess"
+let clearData = "clearData"

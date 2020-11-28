@@ -6,6 +6,7 @@
 //
 
 import Combine
+import SwiftEventBus
 import SwiftUI
 
 class LLDBSummary: ObservableObject {
@@ -15,6 +16,11 @@ class LLDBSummary: ObservableObject {
     @Published var targets: [LLDBTargetModel]?
 
     init() {
+        SwiftEventBus.onMainThread(self, name: clearData) { _ in
+            self.hasTarget = false
+            self.targets?.removeAll()
+        }
+
         Timer.scheduledTimer(withTimeInterval: fetchFrequency, repeats: true) { _ in
             fetchSummary { summary in
                 self.hasTarget = !summary.targets.isEmpty
@@ -23,8 +29,9 @@ class LLDBSummary: ObservableObject {
                 self.targets?.forEach { target in
                     target.modules.forEach { module in
                         module.compileUnits.forEach { unit in
+                            print("find file \(unit.filePath)")
                             DispatchQueue.global(qos: .background).async {
-                                FileStore.loadFile(filePath: unit.filePath)
+                                sharedFileStore.loadFile(filePath: unit.filePath)
                             }
                         }
                     }

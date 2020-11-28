@@ -6,6 +6,7 @@
 //
 
 import Combine
+import SwiftEventBus
 import SwiftUI
 
 class InnerState: ObservableObject {
@@ -18,6 +19,11 @@ class InnerState: ObservableObject {
         Timer.scheduledTimer(withTimeInterval: fetchFrequency, repeats: true) { _ in
             fetchPing { connected in
                 self.connected = connected
+                self.currentTargetIndex = connected ? self.currentTargetIndex : 0
+
+                if !connected {
+                    SwiftEventBus.post(clearData)
+                }
             }
         }
     }

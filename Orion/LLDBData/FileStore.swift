@@ -15,7 +15,11 @@ class FileStoreList: ObservableObject {
     @Published var files: [String] = []
 
     init() {
-        SwiftEventBus.onBackgroundThread(self, name: loadFileSuccess) { res in
+        SwiftEventBus.onMainThread(self, name: clearData) { _ in
+            self.files.removeAll()
+        }
+
+        SwiftEventBus.onMainThread(self, name: loadFileSuccess) { res in
             if let filePath = res?.object {
                 self.files.append("\(filePath)")
             }
@@ -23,19 +27,28 @@ class FileStoreList: ObservableObject {
     }
 }
 
-enum FileStore {
-    private static let fileCache = MemoryStorage<String, String>(
-        config: MemoryConfig(expiry: .never, countLimit: 100, totalCostLimit: 100))
+class FileStore {
+    private let fileCache = MemoryStorage<String, String>(config: MemoryConfig(
+        expiry: .never, countLimit: 100, totalCostLimit: 100
+    ))
 
-    static func loadFile(filePath: String) {
+    init() {
+        SwiftEventBus.onMainThread(self, name: clearData) { _ in
+            self.fileCache.removeAll()
+        }
+    }
+
+    func hasFile(filePath: String) -> Bool {
+        ((try? fileCache.existsObject(forKey: filePath)) == true)
+    }
+
+    func loadFile(filePath: String) {
         if hasFile(filePath: filePath) {
             return
         }
 
-        let file = TextFile(path: Path(filePath))
-        var fileContent = ""
         do {
-            try fileContent = file.read()
+            let fileContent = try TextFile(path: Path(filePath)).read()
             fileCache.setObject(fileContent, forKey: filePath)
             SwiftEventBus.post(loadFileSuccess, sender: filePath)
             print("load file \(filePath) success")
@@ -43,8 +56,6 @@ enum FileStore {
             print("load file \(filePath) error")
         }
     }
-
-    static func hasFile(filePath: String) -> Bool {
-        ((try? fileCache.existsObject(forKey: filePath)) == true)
-    }
 }
+
+let sharedFileStore = FileStore()
