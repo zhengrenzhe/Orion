@@ -12,7 +12,7 @@ struct ContentView: View {
         HStack(spacing: 0) {
             HSplitView {
                 Files()
-                    .frame(minWidth: 100, maxWidth: .infinity, maxHeight: .infinity)
+                    .frame(minWidth: 100, maxWidth: 230, maxHeight: .infinity)
                     .layoutPriority(1)
                 SourceCode()
                     .frame(minWidth: 100, maxWidth: .infinity, maxHeight: .infinity)

@@ -28,3 +28,4 @@
 "no-target" = "无调试目标";
 "lldb-not-connected" = "未连接LLDB";
 "lldb-connected" = "已连接LLDB";
+"search-file-placeholder" = "搜索";

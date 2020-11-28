@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SourceCode: View {
     var body: some View {
-        Panel(title: "source-code") {
+        Panel(title: "source-code", autoScroll: false) {
             GeometryReader { geo in
                 WebView(width: geo.size.width, height: geo.size.height, htmlName: "index")
             }

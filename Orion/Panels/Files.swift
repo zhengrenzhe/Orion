@@ -10,17 +10,54 @@ import SwiftUI
 struct Files: View {
     @EnvironmentObject private var fileStoreList: FileStoreList
 
+    @State private var searchKey: String = ""
+
+    var searchField: some View {
+        HStack {
+            TextField("search-file-placeholder", text: $searchKey)
+                .font(.system(size: 12))
+                .foregroundColor(.primary)
+                .textFieldStyle(PlainTextFieldStyle())
+                .padding(.vertical, 3)
+                .padding(.horizontal, 8)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 4)
+                        .stroke(Color.gray.opacity(0.6), lineWidth: 1)
+                )
+                .background(Color(NSColor.controlBackgroundColor))
+                .cornerRadius(4)
+        }
+        .padding(.horizontal, 8)
+        .padding(.bottom, 6)
+        .background(Color.clear.opacity(0))
+    }
+
     var body: some View {
-        Panel(title: "files") {
-            ForEach(fileStoreList.files, id: \.self) { filePath in
-                Text(filePath)
+        Panel(title: "files", titleMore: searchField) {
+            List {
+                ForEach(fileStoreList.files, id: \.self) { filePath in
+                    Text(filePath)
+                }
             }
         }
     }
 }
 
 struct Files_Previews: PreviewProvider {
+    @State static var searchKey = ""
+
     static var previews: some View {
-        Files()
+        ZStack {
+            TextField("", text: $searchKey)
+        }
+        .padding(.all, 10)
+        .frame(width: 200)
+    }
+}
+
+extension NSTextField {
+    override open var focusRingType: NSFocusRingType {
+        get { .none }
+        set {}
     }
 }

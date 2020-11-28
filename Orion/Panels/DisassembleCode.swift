@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DisassembleCode: View {
     var body: some View {
-        Panel(title: "disassemble-code") {
+        Panel(title: "disassemble-code", autoScroll: false) {
             GeometryReader { geo in
                 WebView(width: geo.size.width, height: geo.size.height, htmlName: "index")
             }
