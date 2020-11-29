@@ -29,15 +29,17 @@ struct Files: View {
         }
         .padding(.horizontal, 8)
         .padding(.bottom, 6)
-        .background(Color.clear.opacity(0))
     }
 
     var body: some View {
-        Panel(title: "files", titleMore: searchField) {
-            List {
-                ForEach(fileStoreList.files, id: \.self) { filePath in
-                    Text(filePath)
-                }
+        Panel(title: "files", autoScroll: true, titleMore: searchField) {
+            ForEach(fileStoreList.files, id: \.self) { filePath in
+                Text(filePath)
+                    .lineLimit(0)
+                    .padding(0)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Color.red)
+                    .help(filePath)
             }
         }
     }
