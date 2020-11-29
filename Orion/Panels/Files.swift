@@ -36,9 +36,8 @@ struct Files: View {
             ForEach(fileStoreList.files, id: \.self) { filePath in
                 Text(filePath)
                     .lineLimit(0)
-                    .padding(0)
+                    .padding(.all, 4)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(Color.red)
                     .help(filePath)
             }
         }

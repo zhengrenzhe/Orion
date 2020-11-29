@@ -69,6 +69,7 @@
 		AD195F5A25690B36007DC5C7 /* DebuggerTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggerTarget.swift; sourceTree = "<group>"; };
 		AD1A6542256A3B7000B3D0DC /* launch.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = launch.py; sourceTree = "<group>"; };
 		AD1A6548256A3F5900B3D0DC /* ConnectLLDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectLLDB.swift; sourceTree = "<group>"; };
+		AD54BE7625738CD800CAABA4 /* test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = test.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		AD814F0225715DD400C515AB /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
 		AD8B62B025696557009EB91F /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = dist/index.html; sourceTree = "<group>"; };
 		AD90D263256CF78F00E38109 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -152,6 +153,7 @@
 				AD195F38256907C9007DC5C7 /* Orion.entitlements */,
 				AD195F34256907C9007DC5C7 /* Preview Content */,
 				AD195F49256909E0007DC5C7 /* Localizable.strings */,
+				AD54BE7625738CD800CAABA4 /* test.playground */,
 			);
 			path = Orion;
 			sourceTree = "<group>";
