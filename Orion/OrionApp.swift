@@ -23,7 +23,7 @@ struct OrionApp: App {
                 )
                 .environmentObject(LLDBSummary())
                 .environmentObject(InnerState())
-                .environmentObject(FileStoreList())
+                .environmentObject(FileList())
         }.windowToolbarStyle(UnifiedCompactWindowToolbarStyle(showsTitle: false))
 
         Settings {

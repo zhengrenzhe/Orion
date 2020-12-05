@@ -31,7 +31,7 @@ class LLDBSummary: ObservableObject {
                         module.compileUnits.forEach { unit in
                             print("find file \(unit.filePath)")
                             DispatchQueue.global(qos: .background).async {
-                                sharedFileStore.loadFile(filePath: unit.filePath)
+                                SharedFileStore.loadFile(filePath: unit.filePath)
                             }
                         }
                     }

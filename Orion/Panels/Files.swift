@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Files: View {
-    @EnvironmentObject private var fileStoreList: FileStoreList
+    @EnvironmentObject private var fileList: FileList
 
     @State private var searchKey: String = ""
 
@@ -33,7 +33,7 @@ struct Files: View {
 
     var body: some View {
         Panel(title: "files", autoScroll: true, titleMore: searchField) {
-            ForEach(fileStoreList.files, id: \.self) { filePath in
+            ForEach(fileList.files, id: \.self) { filePath in
                 Text(filePath)
                     .lineLimit(0)
                     .padding(.all, 4)
