@@ -21,9 +21,9 @@ class TreeNode {
         }
     }
 
-    public func addChildByPath(pathSeg: String) {
+    public func addChildByPath(path: String) {
         var node = self
-        pathSeg.split(separator: "/").forEach { item in
+        path.split(separator: "/").forEach { item in
             if let searchedNode = node.searchByValue(targetValue: String(item)) {
                 node = searchedNode
             } else {

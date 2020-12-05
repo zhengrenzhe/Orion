@@ -32,9 +32,19 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ADABB8BD256EB28100934099"
+               BlueprintIdentifier = "ADB09197257BE342006D5D86"
                BuildableName = "OrionTests.xctest"
                BlueprintName = "OrionTests"
+               ReferencedContainer = "container:Orion.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "ADB091AB257BE39C006D5D86"
+               BuildableName = "OrionUnitTests.xctest"
+               BlueprintName = "OrionUnitTests"
                ReferencedContainer = "container:Orion.xcodeproj">
             </BuildableReference>
          </TestableReference>

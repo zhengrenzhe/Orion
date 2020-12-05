@@ -39,14 +39,16 @@
 		ADABB8AD256D2CFB00934099 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADABB8AC256D2CFB00934099 /* Model.swift */; };
 		ADABB8B1256D31DC00934099 /* LLDBSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADABB8B0256D31DC00934099 /* LLDBSummary.swift */; };
 		ADABB8B4256EA04300934099 /* InnerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADABB8B3256EA04300934099 /* InnerState.swift */; };
-		ADABB8CB256EB3A000934099 /* CacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADABB8CA256EB3A000934099 /* CacheTest.swift */; };
+		ADB091AF257BE39C006D5D86 /* TreeNodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB091AE257BE39C006D5D86 /* TreeNodeTest.swift */; };
+		ADB091C0257BE43F006D5D86 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB091BF257BE43F006D5D86 /* XCTest.framework */; };
+		ADB091C7257BE59F006D5D86 /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD719A65257BDF2D00B8FE20 /* TreeNode.swift */; };
 		ADE22FEE256A747E001A27E8 /* Panel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE22FED256A747E001A27E8 /* Panel.swift */; };
 		ADE22FF5256A7B59001A27E8 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE22FF4256A7B59001A27E8 /* Consts.swift */; };
 		ADF1BF66257138AE0014360B /* FileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF1BF65257138AE0014360B /* FileCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		ADABB8C3256EB28100934099 /* PBXContainerItemProxy */ = {
+		ADB091B1257BE39C006D5D86 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AD195F23256907C8007DC5C7 /* Project object */;
 			proxyType = 1;
@@ -89,9 +91,10 @@
 		ADABB8AC256D2CFB00934099 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		ADABB8B0256D31DC00934099 /* LLDBSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLDBSummary.swift; sourceTree = "<group>"; };
 		ADABB8B3256EA04300934099 /* InnerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerState.swift; sourceTree = "<group>"; };
-		ADABB8BE256EB28100934099 /* OrionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADABB8C2256EB28100934099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADABB8CA256EB3A000934099 /* CacheTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTest.swift; sourceTree = "<group>"; };
+		ADB091AC257BE39C006D5D86 /* OrionUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrionUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADB091AE257BE39C006D5D86 /* TreeNodeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNodeTest.swift; sourceTree = "<group>"; };
+		ADB091B0257BE39C006D5D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADB091BF257BE43F006D5D86 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		ADE22FED256A747E001A27E8 /* Panel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Panel.swift; sourceTree = "<group>"; };
 		ADE22FF4256A7B59001A27E8 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		ADF1BF65257138AE0014360B /* FileCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCache.swift; sourceTree = "<group>"; };
@@ -109,10 +112,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADABB8BB256EB28100934099 /* Frameworks */ = {
+		ADB091A9257BE39C006D5D86 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB091C0257BE43F006D5D86 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,8 +127,9 @@
 			isa = PBXGroup;
 			children = (
 				AD195F2D256907C8007DC5C7 /* Orion */,
-				ADABB8BF256EB28100934099 /* OrionTests */,
+				ADB091AD257BE39C006D5D86 /* OrionUnitTests */,
 				AD195F2C256907C8007DC5C7 /* Products */,
+				ADB091BE257BE43F006D5D86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				AD195F2B256907C8007DC5C7 /* Orion.app */,
-				ADABB8BE256EB28100934099 /* OrionTests.xctest */,
+				ADB091AC257BE39C006D5D86 /* OrionUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -266,13 +271,21 @@
 			path = monaco;
 			sourceTree = "<group>";
 		};
-		ADABB8BF256EB28100934099 /* OrionTests */ = {
+		ADB091AD257BE39C006D5D86 /* OrionUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				ADABB8CA256EB3A000934099 /* CacheTest.swift */,
-				ADABB8C2256EB28100934099 /* Info.plist */,
+				ADB091AE257BE39C006D5D86 /* TreeNodeTest.swift */,
+				ADB091B0257BE39C006D5D86 /* Info.plist */,
 			);
-			path = OrionTests;
+			path = OrionUnitTests;
+			sourceTree = "<group>";
+		};
+		ADB091BE257BE43F006D5D86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADB091BF257BE43F006D5D86 /* XCTest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,22 +316,22 @@
 			productReference = AD195F2B256907C8007DC5C7 /* Orion.app */;
 			productType = "com.apple.product-type.application";
 		};
-		ADABB8BD256EB28100934099 /* OrionTests */ = {
+		ADB091AB257BE39C006D5D86 /* OrionUnitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ADABB8C5256EB28100934099 /* Build configuration list for PBXNativeTarget "OrionTests" */;
+			buildConfigurationList = ADB091B3257BE39C006D5D86 /* Build configuration list for PBXNativeTarget "OrionUnitTests" */;
 			buildPhases = (
-				ADABB8BA256EB28100934099 /* Sources */,
-				ADABB8BB256EB28100934099 /* Frameworks */,
-				ADABB8BC256EB28100934099 /* Resources */,
+				ADB091A8257BE39C006D5D86 /* Sources */,
+				ADB091A9257BE39C006D5D86 /* Frameworks */,
+				ADB091AA257BE39C006D5D86 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				ADABB8C4256EB28100934099 /* PBXTargetDependency */,
+				ADB091B2257BE39C006D5D86 /* PBXTargetDependency */,
 			);
-			name = OrionTests;
-			productName = OrionTests;
-			productReference = ADABB8BE256EB28100934099 /* OrionTests.xctest */;
+			name = OrionUnitTests;
+			productName = OrionUnitTests;
+			productReference = ADB091AC257BE39C006D5D86 /* OrionUnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -333,7 +346,7 @@
 					AD195F2A256907C8007DC5C7 = {
 						CreatedOnToolsVersion = 12.2;
 					};
-					ADABB8BD256EB28100934099 = {
+					ADB091AB257BE39C006D5D86 = {
 						CreatedOnToolsVersion = 12.2;
 						TestTargetID = AD195F2A256907C8007DC5C7;
 					};
@@ -360,7 +373,7 @@
 			projectRoot = "";
 			targets = (
 				AD195F2A256907C8007DC5C7 /* Orion */,
-				ADABB8BD256EB28100934099 /* OrionTests */,
+				ADB091AB257BE39C006D5D86 /* OrionUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -378,7 +391,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADABB8BC256EB28100934099 /* Resources */ = {
+		ADB091AA257BE39C006D5D86 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -460,21 +473,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADABB8BA256EB28100934099 /* Sources */ = {
+		ADB091A8257BE39C006D5D86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADABB8CB256EB3A000934099 /* CacheTest.swift in Sources */,
+				ADB091AF257BE39C006D5D86 /* TreeNodeTest.swift in Sources */,
+				ADB091C7257BE59F006D5D86 /* TreeNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		ADABB8C4256EB28100934099 /* PBXTargetDependency */ = {
+		ADB091B2257BE39C006D5D86 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AD195F2A256907C8007DC5C7 /* Orion */;
-			targetProxy = ADABB8C3256EB28100934099 /* PBXContainerItemProxy */;
+			targetProxy = ADB091B1257BE39C006D5D86 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -654,40 +668,40 @@
 			};
 			name = Release;
 		};
-		ADABB8C6256EB28100934099 /* Debug */ = {
+		ADB091B4257BE39C006D5D86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JN4QS7G6Y5;
-				INFOPLIST_FILE = OrionTests/Info.plist;
+				INFOPLIST_FILE = OrionUnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhengrenzhe.OrionTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhengrenzhe.OrionUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orion.app/Contents/MacOS/Orion";
 			};
 			name = Debug;
 		};
-		ADABB8C7256EB28100934099 /* Release */ = {
+		ADB091B5257BE39C006D5D86 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JN4QS7G6Y5;
-				INFOPLIST_FILE = OrionTests/Info.plist;
+				INFOPLIST_FILE = OrionUnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhengrenzhe.OrionTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhengrenzhe.OrionUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orion.app/Contents/MacOS/Orion";
@@ -715,11 +729,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ADABB8C5256EB28100934099 /* Build configuration list for PBXNativeTarget "OrionTests" */ = {
+		ADB091B3257BE39C006D5D86 /* Build configuration list for PBXNativeTarget "OrionUnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ADABB8C6256EB28100934099 /* Debug */,
-				ADABB8C7256EB28100934099 /* Release */,
+				ADB091B4257BE39C006D5D86 /* Debug */,
+				ADB091B5257BE39C006D5D86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
