@@ -348,7 +348,6 @@
 					};
 					ADB091AB257BE39C006D5D86 = {
 						CreatedOnToolsVersion = 12.2;
-						TestTargetID = AD195F2A256907C8007DC5C7;
 					};
 				};
 			};
@@ -672,7 +671,6 @@
 		ADB091B4257BE39C006D5D86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -687,14 +685,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orion.app/Contents/MacOS/Orion";
 			};
 			name = Debug;
 		};
 		ADB091B5257BE39C006D5D86 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JN4QS7G6Y5;
@@ -707,7 +703,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhengrenzhe.OrionUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orion.app/Contents/MacOS/Orion";
 			};
 			name = Release;
 		};
