@@ -15,10 +15,12 @@ jobs:
         with:
           p12-file-base64: ${{ secrets.CERTIFICATES_P12 }}
           p12-password: ${{ secrets.CERTIFICATES_P12_PASSWORD }}
+
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2-beta
-        with:
-          node-version: '14'
+        
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.2
+
       - name: Build monaco
         run: cd Orion/monaco && npm i && npm run build
 #       - name: Run tests
