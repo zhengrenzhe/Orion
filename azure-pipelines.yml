@@ -16,4 +16,5 @@ steps:
     sdk: 'macosx11.0'
     scheme: 'Orion'
     packageApp: false
+    signingOption: 'default'
     destinationPlatformOption: 'macOS'
