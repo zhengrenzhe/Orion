@@ -17,4 +17,4 @@ jobs:
           p12-password: ${{ secrets.CERTIFICATES_P12_PASSWORD }}
       - uses: actions/checkout@v2
       - name: Run tests
-        run: xcodebuild test -scheme Orion
+        run: xcodebuild test -scheme Orion CODE_SIGNING_REQUIRED=NO
