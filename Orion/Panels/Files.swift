@@ -33,14 +33,30 @@ struct Files: View {
 
     var body: some View {
         Panel(title: "files", autoScroll: true, titleMore: searchField) {
-            ForEach(fileList.files, id: \.self) { filePath in
-                Text(filePath)
-                    .lineLimit(0)
-                    .padding(.all, 4)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .help(filePath)
-            }
+            FileItem(treeNode: fileList.fileTree, indentCount: 0)
+                .padding(.horizontal, 8)
         }
+    }
+}
+
+struct FileItem: View {
+    var treeNode: TreeNode
+    var indentCount: Int
+
+    var body: some View {
+        VStack {
+            HStack {
+                Text(treeNode.value)
+                    .lineLimit(0)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Spacer()
+            }
+            VStack {
+                ForEach(treeNode.children, id: \.self.id) { child in
+                    FileItem(treeNode: child, indentCount: indentCount + 1)
+                }
+            }
+        }.padding(.leading, CGFloat(indentCount * 3))
     }
 }
 

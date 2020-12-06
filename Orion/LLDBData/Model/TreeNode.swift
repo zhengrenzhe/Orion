@@ -8,6 +8,7 @@
 import Foundation
 
 class TreeNode {
+    let id = UUID()
     var value: String = ""
     var children: [TreeNode] = []
 
